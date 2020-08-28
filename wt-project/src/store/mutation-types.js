@@ -1,0 +1,3 @@
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR'
+
+export const ADD_LIST_CITY = 'ADD_LIST_CITY'
