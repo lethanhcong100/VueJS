@@ -81,7 +81,7 @@
 export default {
 data(){
     return{
-        msg:"Footer"
+        msg:"CompFooter"
     }
 }
 }

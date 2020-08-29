@@ -465,7 +465,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'CompHeader',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App Contact'

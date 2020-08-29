@@ -2,12 +2,12 @@
   <div id="app">
       <div id="wrapper">
         <!-- Header -->
-        <Header/>
+        <CompHeader/>
 
         <!-- Body -->
         <router-view/>
 
-        <Footer/>
+        <CompFooter/>
 
         <div class="dmtop" v-on:click="click()">Scroll to Top</div>
         
@@ -19,14 +19,13 @@
 <script>
 
 
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import CompHeader from './components/CompHeader.vue'
+import CompFooter from './components/CompFooter.vue'
 export default {
   name: 'App',
   components:{
-   
-    Header,
-    Footer
+    CompHeader,
+    CompFooter
   },
   methods:{
     click(){
