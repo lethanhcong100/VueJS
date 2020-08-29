@@ -5,7 +5,7 @@
                 <div class="masonry-blog clearfix">
                     <div class="first-slot">
                         <div class="masonry-box post-media">
-                            <img src="../upload/tech_01.jpg" alt="" class="img-fluid">
+                            <img src="../upload/tech_01.jpg" alt="" height="400">
                             <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
@@ -22,7 +22,7 @@
 
                     <div class="second-slot">
                         <div class="masonry-box post-media">
-                            <img src="../upload/tech_02.jpg" alt="" class="img-fluid">
+                            <img src="../upload/tech_02.jpg" alt="" height="400">
                             <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
@@ -40,7 +40,7 @@
 
                     <div class="last-slot">
                         <div class="masonry-box post-media">
-                            <img src="../upload/tech_03.jpg" alt="" class="img-fluid">
+                            <img src="../upload/tech_03.jpg" alt="" height="400">
                             <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
