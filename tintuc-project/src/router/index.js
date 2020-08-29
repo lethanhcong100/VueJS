@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Contact from '@/components/Contact'
-import News from '@/components/News'
+import BodyIndex from '@/components/BodyIndex'
+import BodyItem from '@/components/BodyItem'
 Vue.use(Router)
 
 export default new Router({
   routes: [
-   
     {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
+      path: '/',
+      name: 'BodyIndex',
+      component: BodyIndex
     },
     {
-      path: '/News',
-      name: 'News',
-      component: News
+      path: '/BodyItem',
+      name: 'BodyItem',
+      component: BodyItem
     }
+
   ]
 })

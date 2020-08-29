@@ -26,23 +26,29 @@
         interval: 4000
     })
 
-    $(window).load(function() {
+ 
+
+    $(window).on('load', function() { 
         $("#preloader").on(500).fadeOut();
         $(".preloader").on(600).fadeOut("slow");
-    });
+     });
 
     jQuery(window).scroll(function(){
         if (jQuery(this).scrollTop() > 1) {
+           
             jQuery('.dmtop').css({bottom:"25px"});
         } else {
+           
             jQuery('.dmtop').css({bottom:"-100px"});
         }
     });
-    jQuery('.dmtop').click(function(){
+    jQuery('.dmtop').click(function(){    
         jQuery('html, body').animate({scrollTop: '0px'}, 800);
         return false;
     });
 
+
+    
 })(jQuery);
 
 

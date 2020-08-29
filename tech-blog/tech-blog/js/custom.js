@@ -39,6 +39,7 @@
         }
     });
     jQuery('.dmtop').click(function(){
+        console.log('click ne');
         jQuery('html, body').animate({scrollTop: '0px'}, 800);
         return false;
     });
