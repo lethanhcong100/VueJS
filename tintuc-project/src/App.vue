@@ -29,7 +29,7 @@ export default {
   },
   methods:{
     click(){
-      jQuery('html, body').animate({scrollTop: '0px'}, 800);
+      jQuery('html, body').animate({scrollTop: '100px'}, 800);
         return false;
     }
   }

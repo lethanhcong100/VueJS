@@ -12,7 +12,8 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-index.html">Home</a>
+                               
+                                 <router-link to="/" class="nav-link">Home</router-link>
                             </li>
                             <li
                                 class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
@@ -433,16 +434,20 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-01.html">Gadgets</a>
+                               
+                                <router-link to="/BodyCategory" class="nav-link">Gadgets</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-02.html">Videos</a>
+                             
+                                  <router-link to="/BodyCategory" class="nav-link">Videos</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-03.html">Reviews</a>
+                           
+                                 <router-link to="/BodyCategory" class="nav-link">Reviews</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-contact.html">Contact Us</a>
+                                 <router-link to="/BodyCategory" class="nav-link">Contact Us</router-link>
+                               
                             </li>
                         </ul>
                         <ul class="navbar-nav mr-2">
