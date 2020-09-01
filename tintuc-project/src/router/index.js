@@ -6,7 +6,7 @@ import BodyCategory from '@/components/BodyCategory'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+   routes: [
     {
       path: '/',
       name: 'BodyIndex',

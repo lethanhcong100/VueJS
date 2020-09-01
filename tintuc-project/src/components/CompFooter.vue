@@ -74,6 +74,7 @@
                 </div>
             </div><!-- end container -->
         </footer><!-- end footer -->
+        <div class="dmtop" v-on:click="click()">Scroll to Top</div>
   </div>
 </template>
 
@@ -83,7 +84,15 @@ data(){
     return{
         msg:"CompFooter"
     }
-}
+},
+methods:{
+    click(){
+      jQuery('html, body').animate({scrollTop: '100px'}, 800);
+        return false;
+    }
+  }
+
+
 }
 </script>
 
