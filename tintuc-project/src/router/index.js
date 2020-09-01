@@ -13,9 +13,10 @@ export default new Router({
       component: BodyIndex
     },
     {
-      path: '/BodyItem',
+      path: '/BodyItem?id=:id',
       name: 'BodyItem',
-      component: BodyItem
+      component: BodyItem,
+      props: true
     },
     {
       path: '/BodyCategory',

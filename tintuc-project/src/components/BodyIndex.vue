@@ -97,17 +97,17 @@
                   <!-- end blog-top -->
                   <div class="blog-list clearfix">
                    
-                     <!-- For các tin tức ở Index qua slot BodyIndex -->
-         <div v-for="post in posts" slot="BodyIndex">
-            <router-link to="/BodyItem">
+                     <!-- For các tin tức array posts từ App.vue props qua-->
+         <div v-for="post in posts" >       
+            <router-link :to="{name: 'BodyItem', params: { id: post.id } }">
                <hr class="invis">
                <div class="blog-box row" >
                   <div class="col-md-4">
                      <div class="post-media" v-on:click="post.counter += 1">
-                        <router-link to="/BodyItem">            
+                           
                            <img v-bind:src="require('../upload/' + post.images)" class="img-fluid"/>
                            <div class="hovereffect"></div>
-                        </router-link>
+                       
                      </div>
                      <!-- end media -->
                   </div>

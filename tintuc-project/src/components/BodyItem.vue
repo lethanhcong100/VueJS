@@ -1,5 +1,6 @@
 <template>
 <div>
+<h1>{{this.$route.query.id}} </h1>
    <section class="section single-wrapper">
       <div class="container">
          <div class="row">
@@ -61,10 +62,12 @@
 </template>
 
 <script>
+console.log(this.$route);
 import BannerRight from './BannerRight.vue'
 import CompComment from './CompComment.vue'
 export default {
   name: 'Item',
+  props: ['id'],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App Contact'
