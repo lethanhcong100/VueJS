@@ -96,46 +96,43 @@
                   </div>
                   <!-- end blog-top -->
                   <div class="blog-list clearfix">
-                   
                      <!-- For các tin tức array posts từ App.vue props qua-->
-         <div v-for="post in posts" v-bind:key="post.id" >       
-            <router-link :to="{name: 'BodyItem', params: { id: post.id } }">
-               <hr class="invis">
-               <div class="blog-box row" >
-                  <div class="col-md-4">
-                     <div class="post-media" v-on:click="post.counter += 1">
-                           
-                           <img v-bind:src="require('../upload/' + post.images)" class="img-fluid"/>
-                           <div class="hovereffect"></div>
-                       
+                     <div v-for="post in posts" v-bind:key="post.id" >
+                        <router-link :to="{name: 'BodyItem', params: { id: post.id } }">
+                           <hr class="invis">
+                           <div class="blog-box row" >
+                              <div class="col-md-4">
+                                 <div class="post-media" v-on:click="post.counter += 1">
+                                    <img v-bind:src="require('../upload/' + post.images)" class="img-fluid"/>
+                                    <div class="hovereffect"></div>
+                                 </div>
+                                 <!-- end media -->
+                              </div>
+                              <!-- end col -->
+                              <div class="blog-meta big-meta col-md-8">
+                                 <h4 v-on:click="post.counter += 1">
+                                    {{post.title }}
+                                 </h4>
+                                 <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
+                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim
+                                    nibh, maximus ac felis nec, maximus tempor odio.
+                                 </p>
+                                 <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html"
+                                    title="">Gadgets</a></small>
+                                 <small >
+                                 21 July, 2017
+                                 </small>
+                                 <small><a href="tech-author.html" title="">by Matilda</a></small>
+                                 <small v-if="post.counter > 0">            
+                                 <i class="fa fa-eye"></i>
+                                 {{post.counter}}        
+                                 </small>
+                              </div>
+                              <!-- end meta -->           
+                           </div>
+                           <!-- end blog-box -->
+                        </router-link>
                      </div>
-                     <!-- end media -->
-                  </div>
-                  <!-- end col -->
-                  <div class="blog-meta big-meta col-md-8">
-                     <h4 v-on:click="post.counter += 1">
-                        {{post.title }}
-                     </h4>
-                     <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                        pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim
-                        nibh, maximus ac felis nec, maximus tempor odio.
-                     </p>
-                     <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html"
-                        title="">Gadgets</a></small>
-                     <small >
-                     21 July, 2017
-                     </small>
-                     <small><a href="tech-author.html" title="">by Matilda</a></small>
-                     <small v-if="post.counter > 0">            
-                     <i class="fa fa-eye"></i>
-                     {{post.counter}}        
-                     </small>
-                  </div>
-                  <!-- end meta -->           
-               </div>
-               <!-- end blog-box -->
-            </router-link>
-         </div>             
                   </div>
                   <!-- end blog-list -->
                </div>
@@ -172,12 +169,19 @@
 import BannerRight from './BannerRight.vue'
 export default {
   name: 'Index',
-  props: ['posts'],
+ 
   data () {
     return {
       msg: 'Welcome to Your Vue.js App Contact',
-      counter: 0
     }
+  },
+
+  computed:{
+     posts(){
+        
+        // Khi load sẽ lấy data trong store ra để for lặp các bài viết index
+        return this.$store.state.posts;
+     } 
   },
   components:{
       BannerRight

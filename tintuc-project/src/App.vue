@@ -5,7 +5,7 @@
       <CompHeader/>
       <!-- Body -->
       <!-- View body item, body index, body category -->
-      <BodyIndex  v-if="this.$route.name == 'BodyIndex'"   v-bind:posts="posts" />
+      <BodyIndex  v-if="this.$route.name == 'BodyIndex'"   />
       <BodyItem  v-if="this.$route.name == 'BodyItem'" />
       <BodyCategory  v-if="this.$route.name == 'BodyCategory'" />
        
@@ -28,11 +28,8 @@ export default {
   name: 'App',
   data(){
     return {
-       posts: [
-      { id: 1, title: 'Giới thiệu về Vue',images:'tech_blog_01.jpg', counter:0},
-      { id: 2, title: 'Các khái niệm trong Vue',images:'tech_blog_02.jpg',counter:0 },
-      { id: 3, title: 'Vue căn bản và vô cùng nâng cao',images:'tech_blog_03.jpg',counter:0}
-    ]
+     
+    msg:"App"
       }
   },
   components:{

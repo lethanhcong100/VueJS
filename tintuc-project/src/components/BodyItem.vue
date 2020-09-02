@@ -79,7 +79,6 @@ export default {
   },
   created(){
       jQuery('html, body').animate({scrollTop: '100px'}, 0);
-      console.log(this.$route.params.id);
       return false;
       
   }
