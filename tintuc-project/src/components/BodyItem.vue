@@ -1,6 +1,6 @@
 <template>
 <div>
-<h1>{{this.$route.query.id}} </h1>
+
    <section class="section single-wrapper">
       <div class="container">
          <div class="row">
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-console.log(this.$route);
+
 import BannerRight from './BannerRight.vue'
 import CompComment from './CompComment.vue'
 export default {
@@ -78,9 +78,12 @@ export default {
       CompComment
   },
   created(){
-       jQuery('html, body').animate({scrollTop: '100px'}, 0);
-        return false;
+      jQuery('html, body').animate({scrollTop: '100px'}, 0);
+      console.log(this.$route.params.id);
+      return false;
+      
   }
+
 }
 </script>
 

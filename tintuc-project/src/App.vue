@@ -41,7 +41,8 @@ export default {
     BodyIndex,
     BodyItem,
     BodyCategory
-  }
+  },
+ 
  
 }
 </script>

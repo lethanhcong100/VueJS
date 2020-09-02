@@ -98,7 +98,7 @@
                   <div class="blog-list clearfix">
                    
                      <!-- For các tin tức array posts từ App.vue props qua-->
-         <div v-for="post in posts" >       
+         <div v-for="post in posts" v-bind:key="post.id" >       
             <router-link :to="{name: 'BodyItem', params: { id: post.id } }">
                <hr class="invis">
                <div class="blog-box row" >
