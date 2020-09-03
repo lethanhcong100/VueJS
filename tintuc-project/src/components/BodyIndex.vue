@@ -175,10 +175,16 @@ export default {
       msg: 'Welcome to Your Vue.js App Contact',
     }
   },
-
+  created(){
+         this.$store.dispatch("fetchUsers")   ;
+         
+  },
   computed:{
      posts(){
-        
+             
+      
+        console.log("Users--->",this.$store.state.users)    
+       
         // Khi load sẽ lấy data trong store ra để for lặp các bài viết index
         return this.$store.state.posts;
      } 
