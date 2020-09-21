@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TestVue\\Test1\\Test1\\Test1.csproj": {}
+    "D:\\VueJS\\VueJS\\Test1\\Test1\\Test1.csproj": {}
   },
   "projects": {
-    "D:\\TestVue\\Test1\\Test1\\Test1.csproj": {
+    "D:\\VueJS\\VueJS\\Test1\\Test1\\Test1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TestVue\\Test1\\Test1\\Test1.csproj",
+        "projectUniqueName": "D:\\VueJS\\VueJS\\Test1\\Test1\\Test1.csproj",
         "projectName": "Test1",
-        "projectPath": "D:\\TestVue\\Test1\\Test1\\Test1.csproj",
+        "projectPath": "D:\\VueJS\\VueJS\\Test1\\Test1\\Test1.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TestVue\\Test1\\Test1\\obj\\",
+        "outputPath": "D:\\VueJS\\VueJS\\Test1\\Test1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "VueCliMiddleware": {
               "target": "Package",
               "version": "[3.0.0, )"

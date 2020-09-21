@@ -5,35 +5,48 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
 
-    state: {
+  state: {
 
-        users: [],
-        posts: [
-            { id: 1, title: 'Giới thiệu về Vue', images: 'tech_blog_01.jpg', counter: 0 },
-            { id: 2, title: 'Các khái niệm trong Vue', images: 'tech_blog_02.jpg', counter: 0 },
-            { id: 3, title: 'Vue căn bản và vô cùng nâng cao', images: 'tech_blog_03.jpg', counter: 0 }
-        ]
-    },
-    mutations: {
-        FETCH_USERS(state, users) {
-            state.users = users;
-        }
-    },
-    actions:
-    {
-        fetchUsers() {
-            axios.get('http://newsapi.org/v2/everything?' +
-                'q=Apple&' +
-                'from=2020-09-02&' +
-                'sortBy=popularity&' +
-                'apiKey=144b85025f184bad9bced80389f64bff')
-                .then(response => {
-                    store.commit('FETCH_USERS', response.data.articles);
-                })
-                .catch(e => {
-
-                })
-        }
+    news: [],
+    posts: [
+      { id: 1, title: 'Giới thiệu về Vue', images: 'tech_blog_01.jpg', counter: 0 },
+      { id: 2, title: 'Các khái niệm trong Vue', images: 'tech_blog_02.jpg', counter: 0 },
+      { id: 3, title: 'Vue căn bản và vô cùng nâng cao', images: 'tech_blog_03.jpg', counter: 0 }
+    ]
+  },
+  mutations: {
+    FETCH_USERS(state, news) {
+      state.news = news;
+    
     }
+  },
+  actions:
+  {
+    //fetchUsers() {
+    //  axios.get('http://newsapi.org/v2/everything?' +
+    //    'q=Apple&' +
+    //    'from=2020-09-02&' +
+    //    'sortBy=popularity&' +
+    //    'apiKey=144b85025f184bad9bced80389f64bff')
+    //    .then(response => {
+    //      store.commit('FETCH_USERS', response.data.articles);
+    //    })
+    //    .catch(e => {
+
+    //    })
+    //}
+
+
+     fetchUsers() {
+       axios.get('http://localhost:50598/news')
+        .then(response => {
+          store.commit('FETCH_USERS', response.data);
+        })
+        .catch(e => {
+
+        })
+    }
+
+  }
 
 })

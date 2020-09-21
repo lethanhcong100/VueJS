@@ -102,30 +102,30 @@
                            <hr class="invis">
                            <div class="blog-box row" >
                               <div class="col-md-4">
-                                 <div class="post-media" v-on:click="post.counter += 1">
-                                    <img v-bind:src="require('../upload/' + post.images)" class="img-fluid"/>
-                                    <div class="hovereffect"></div>
-                                 </div>
+                                <div class="post-media" v-on:click="post.counter += 1">
+                                  <!--<img v-bind:src="require('../upload/' + post.images)" class="img-fluid"/>-->
+                                 <img v-bind:src="post.urlImage" class="img-fluid"/>
+                                  <div class="hovereffect"></div>
+                                </div>
                                  <!-- end media -->
                               </div>
                               <!-- end col -->
                               <div class="blog-meta big-meta col-md-8">
-                                 <h4 v-on:click="post.counter += 1">
+                                 <h4 v-on:click="post.countView += 1">
                                     {{post.title }}
                                  </h4>
-                                 <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim
-                                    nibh, maximus ac felis nec, maximus tempor odio.
+                                 <p>
+                                   {{post.description}}
                                  </p>
                                  <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html"
                                     title="">Gadgets</a></small>
-                                 <small >
-                                 21 July, 2017
+                                 <small>
+                                   {{post.createDate}}
                                  </small>
-                                 <small><a href="tech-author.html" title="">by Matilda</a></small>
-                                 <small v-if="post.counter > 0">            
+                                 <small><a href="tech-author.html" title="">{{post.nameAuthor}}</a></small>
+                                 <small v-if="post.countView > 0">            
                                  <i class="fa fa-eye"></i>
-                                 {{post.counter}}        
+                                 {{post.countView}}        
                                  </small>
                               </div>
                               <!-- end meta -->           
@@ -182,11 +182,10 @@ export default {
   computed:{
      posts(){
              
-      
-        console.log("Users--->",this.$store.state.users)    
+      console.log("Users--->", this.$store.state.news)    
        
         // Khi load sẽ lấy data trong store ra để for lặp các bài viết index
-        return this.$store.state.posts;
+      return this.$store.state.news;
      } 
   },
   components:{

@@ -38,6 +38,10 @@ namespace Test1
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors(builder => builder.SetIsOriginAllowed(_ => true)
+                                   .AllowAnyMethod()
+                                   .AllowAnyHeader()
+                                   .AllowCredentials());
             }
 
             app.UseRouting();
